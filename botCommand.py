@@ -42,7 +42,7 @@ class EchoBot(fchat.FChatClient):
             self.masterList.append(character)
             self.firstUsers.append(character)
 
-    # Grab profile name of person leaving room, and add it to 'Master List' and 'First Users'
+    # Grab profile name of person leaving room, and remove it to 'Master List' and 'First Users'
     def on_LCH(self, channel, character):
         if character in self.masterList:
             self.masterList.remove(character)
